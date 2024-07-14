@@ -156,6 +156,21 @@ lovely-feature-container{
     font-weight: 600;
     margin-top: 10px;
 }
+
+/* Sponsor Info sections */
+
+.sponsor-info{
+    max-width: 540px;
+    margin:50px auto;
+    text-align: center;
+}
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-company img{
+    filter: grayscale(100%);
+}
 /* font style for heading */
 #quick-list{
     font-size: 2.81rem;
@@ -173,10 +188,12 @@ lovely-feature-container{
     .navbar,.nav-link,.teams{
         flex-direction: column;
     }
-    .team-image-container,.fact-container{
+    .team-image-container,
+    .fact-container,
+    .sponsor-company{
         grid-template-columns: repeat(1,1fr)
     }
-    .fact-container{
+    .fact-container,.sponsor-company{
         justify-items: center;
         gap: 24px;
     }
@@ -193,5 +210,9 @@ lovely-feature-container{
     }
     .our-features{
         margin-left: 50px auto;
+    }
+    .sponsor-company, .fact-container{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
     }
 }
