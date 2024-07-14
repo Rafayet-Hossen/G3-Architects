@@ -38,6 +38,15 @@
 .primary-bg{
     background-color: rgba(255, 144, 14, 0.10);
 }
+.section-title {
+    font-size: 2.81rem;
+    font-weight: 700;
+
+}
+.banner-description {
+    font-weight: 400;
+    font-size: 1rem;
+}
 /* Header Style */
 .brand{
     font-weight: 700;
@@ -72,18 +81,113 @@
     font-size: 4rem;
     margin-bottom: 20px;
 }
-.banner-description{
-    font-weight: 400;
-    font-size: 1rem;
-}
+
 .banner-image{
     width: 100%;
+}
+/* Main Section Style */
+main{
+    max-width: 1440px;
+    margin:0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+.teams{
+    align-items: center;
+}
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+.our-features{
+    margin-left: 73px;
+    max-width: 537px;
+}
+/* Card Design */
+.card-design{
+    max-width: 586px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06); 
+    padding: 30px 42px 30px 30px;
+}
+
+/* Lovely Feature Style */
+.lovely-feature{
+    flex-direction: row;
+    align-items: center;
+    max-width: 1440px;
+    gap: 20px;
+}
+lovely-feature-container{
+    display: flex;
+    flex-direction: column;
+}
+/* Some facts cord design */
+
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.fact-card {
+    border-radius: 8px;
+    width: 240px;
+    height: 240px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 144, 14, 1);
+}
+.fact-card > div{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+/* font style for heading */
+#quick-list{
+    font-size: 2.81rem;
+    font-weight: 600;
+}
+#feature{
+    color: rgba(255, 144, 14, 1);
+    font-size: 2.81rem;
+    font-weight: 600;
 }
 
 /* responsive media query */
 
 @media screen and (max-width: 576px) {
-    .navbar,.nav-link{
+    .navbar,.nav-link,.teams{
         flex-direction: column;
+    }
+    .team-image-container{
+        grid-template-columns: repeat(1,1fr)
+    }
+    .our-features{
+        margin-left: 20px;
+    }
+}
+
+/* Media Query for Medium Devices */
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin-left: 50px auto;
     }
 }
